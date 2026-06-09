@@ -29,5 +29,4 @@ Sign in as a user that is **not** a member of the U.S. Sales group (for example 
 ### External user
 
 Attach a DogOps file as a copy and send it to someone outside the demo organization. The document remains encrypted at the recipient's end.
-
-> **Verify:** the external recipient sees a sign-in / access-request screen instead of the document content.
+The external recipient sees a sign-in / access-request screen instead of the document content.
