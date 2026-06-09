@@ -14,7 +14,8 @@ Before starting this phase, complete [Phase 2 — Lab Guide](02-lab-guide.md):
 
 # Data Loss Prevention
 
-## DSPM — extend insights for data discovery `#E5Dev` 
+## DSPM — extend insights for data discovery 
+Note: Requires eDLP
 
 1. Go to **DSPM** > **Tasks and actions** > **Setup tasks**.
 2. Select **Extend your insights for data discovery** and create the following policies:
