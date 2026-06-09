@@ -2,7 +2,7 @@
 
 ## Automatic client-side labeling
 
-Paste content from any DogOps document in [`test-files/DogOps Test Files/`](../test-files/DogOps%20Test%20Files/) into a blank document in your admin user's OneDrive.
+Paste content from any DogOps document in [`test-files/DogOps Test Files.zip`](../test-files/DogOps%20Test%20Files.zip) into a blank document in your admin user's OneDrive.
 
 A policy tip confirms that the Highly Confidential/DogOps label has been applied automatically.
 
@@ -10,7 +10,7 @@ A policy tip confirms that the Highly Confidential/DogOps label has been applied
 
 ## Automatic service-side labeling in action
 
-Upload the files in [`test-files/DogOps Test Files/`](../test-files/DogOps%20Test%20Files/) to a public SharePoint site. They are automatically labeled as Project DogOps within a few hours. You can confirm this in **Microsoft Purview** > **Activity explorer**.
+Upload the files in [`test-files/DogOps Test Files.zip`](../test-files/DogOps%20Test%20Files.zip) to a public SharePoint site. They are automatically labeled as Project DogOps within a few hours. You can confirm this in **Microsoft Purview** > **Activity explorer**.
 
 ![Activity explorer showing files auto-labeled as Highly Confidential/DogOps](../images/after-the-lab-developer-subscription-043-e4c54831.png)
 

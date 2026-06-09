@@ -168,7 +168,7 @@
       tmp.querySelectorAll('a[href]').forEach(a => {
         const href = a.getAttribute('href');
         if (!href || /^(https?:|mailto:|tel:|#|\/\/)/i.test(href)) return;
-        if (/(?:^|\/)materials\//i.test(href) || /\.(zip|txt|csv|pdf|docx?|xlsx?|pptx?|json|xml|ps1|7z|tar|gz)$/i.test(href)) {
+        if (/(?:^|\/)(materials|test-files|data)\//i.test(href) || /\.(zip|txt|csv|pdf|docx?|xlsx?|pptx?|json|xml|ps1|7z|tar|gz)$/i.test(href)) {
           const filename = href.split('/').pop();
           a.setAttribute('download', filename);
         }
