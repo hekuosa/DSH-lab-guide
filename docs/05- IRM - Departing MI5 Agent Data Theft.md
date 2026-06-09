@@ -85,6 +85,8 @@ The final step is to run a sample script that uploads the HR data from the CSV f
 
 ## Create a keyword dictionary from a file using PS
 
+Reference: [Create a keyword dictionary from a file](https://learn.microsoft.com/en-us/purview/sit-create-a-keyword-dictionary#create-a-keyword-dictionary-from-a-file-using-powershell)
+
 1. To begin, you need to connect to Security & Compliance PowerShell.
 2. Save keywords text file locally (Has to be saved with Unicode encoding. To if needed to check > In Notepad, navigate to > Save As > Encoding > Unicode.)
 3. Read the file into a variable by running this cmdlet:
@@ -96,8 +98,30 @@ The final step is to run a sample script that uploads the HR data from the CSV f
 4. Read the file into a variable by running this cmdlet:
 
 ```powershell
-  New-DlpKeywordDictionary -Name <mark><name><mark>-Description <mark> <description> <mark> -FileData $fileData
+  New-DlpKeywordDictionary -Name <name>-Description <description> -FileData $fileData
    ```
+
+Do again for keyword dictionary 2.
+
+##  Create a custom Sensitive Information Type (SIT) 
+
+Create MI5 custom SIT with the following configuration: 
+   - **Primary element** (keyword dictionary, Word match): `007Movies`
+   - **Primary element** (keyword dictionary, Word match): `007James`
+   - **Character proximity:** `300` 
+   - **Confidence level:** Medium (75 in PowerShell)
+
+You can create SIT either through the Microsoft Purview portal or by using Security & Compliance PowerShell cmdlets. The PowerShell approach is shown below.
+
+- Microsoft Learn [Modify a custom sensitive information type using PowerShell]( https://learn.microsoft.com/en-us/purview/sit-modify-a-custom-sensitive-information-type-in-powershell)
+- Microsoft Learn [Create a custom sensitive information using PowerShell](https://learn.microsoft.com/en-us/purview/sit-create-a-custom-sensitive-information-type-in-scc-powershell)
+
+
+## Universal Exports document library
+
+1. Create a **Universal Exports** SharePoint site or use any of the existing SPO sites.
+2. Create a new document library named `MI5`
+2. Upload the **James Bond — Daily briefing** and **Project documents** folders to the `MI5` document library.
 
 
 ## Create an Insider Risk Management policy
@@ -125,7 +149,7 @@ The final step is to run a sample script that uploads the HR data from the CSV f
    - **Detection options:**
      - **Sequence detection** — select **Download from M365 location then exfiltrate** and **Download from M365 location then exfiltrate, then delete**.
      - **Cumulative exfiltration detection** — leave unselected.
-     - **Risk score boosters** — select **Activity is above the user's usual activity for that day**, then **Next**.
+     - **Risk score boosters** — leave unselected.
 
    ![Selected Insider Risk Management detection options](../images/irm-selected-detectionoptions.png)
 
@@ -152,17 +176,3 @@ Over the first three days, perform the following actions as the departing user t
 - Download 2 files from SharePoint to OneDrive.
 - Send 1 email to a recipient outside the organization.
 - Send 1 email to a public (free) domain.
-
-### Universal Exports document library
-
-1. On the **Universal Exports** SharePoint site, create a new document library named `MI5`, labeled **Internal Exception**.
-2. Upload the **James Bond — Daily briefing** and **Project documents** folders.
-
-   > _These are automatically given the **Internal Exception** label._
-
-### Follow-up DLP automation
-
-- Configure a DLP policy on **Credentials** with a Power Automate action that emails the user a "do not store credentials" reminder.
-- **Locations:** SharePoint Online and OneDrive.
-
-> **Verify:** in **Insider Risk Management** > **Alerts**, alerts are generated for the departing user after the simulated activity and HR connector events are processed.
