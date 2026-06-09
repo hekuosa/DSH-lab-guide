@@ -128,9 +128,21 @@
       const res = await fetch(DOCS[i].file);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       let md = await res.text();
-      // Rewrite ../images/foo → images/foo (page lives in LAB GUIDE/, alongside images/)
-      md = md.replace(/\.\.\/images\//g, 'images/');
-      docPaper.innerHTML = marked.parse(md);
+      const html = marked.parse(md);
+      // The page lives at LAB GUIDE/; docs reference '../images/', '../materials/', etc.
+      // Rewrite '../' to '' on any relative href/src so they resolve from LAB GUIDE/.
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html;
+      tmp.querySelectorAll('[href], [src]').forEach(el => {
+        ['href', 'src'].forEach(attr => {
+          const v = el.getAttribute(attr);
+          if (!v) return;
+          // Skip absolute URLs, anchors, mail/tel
+          if (/^(https?:|mailto:|tel:|#|\/\/|\/)/i.test(v)) return;
+          el.setAttribute(attr, v.replace(/^(\.\.\/)+/, ''));
+        });
+      });
+      docPaper.innerHTML = tmp.innerHTML;
       docPaper.scrollTop = 0;
       document.querySelector('.output-panel').scrollTop = 0;
       history.replaceState(null, '', '#' + encodeURIComponent(DOCS[i].file));
