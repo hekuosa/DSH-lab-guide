@@ -1,3 +1,4 @@
+# LAB Guide - Part 1
 
 ## Prerequisites
 
@@ -10,11 +11,11 @@ Before starting this phase, complete [Phase 1 — Before the Lab](01-before-the-
 - Sensitivity labels for containers are enabled (via [`scripts/`](../scripts/) or manually).
 
 
-## Information protection — HR
+# Information protection — HR
 
 In this section we create a Sensitive Information Type (SIT) for employment contracts and use it in a Highly Confidential/HR label that limits access to HR group members only. We add automation so the label is recommended to users when the EmploymentContract SIT is detected, then publish the label to the HR group so it appears in Office apps and can be applied to relevant content.
 
-### Create a custom SIT — HR
+## Create a custom SIT — HR
 
 Reference: [Create a custom SIT from scratch](https://learn.microsoft.com/en-us/purview/sit-create-a-custom-sensitive-information-type#create-a-custom-sit-from-scratch)
 
@@ -66,7 +67,7 @@ Once all functions are added, the result should look like the image below.
 
 ![Pattern 2 supporting functions configured for the HR SIT](../images/lab-guide-developer-subscription-015-32b0a64d.png)
 
-#### Review and create
+### Review and create
 
 1. Review the configured patterns, then select **Next**.
 2. Keep the default confidence level (this leads to the fewest false positives) and select **Next**.
@@ -74,7 +75,7 @@ Once all functions are added, the result should look like the image below.
 
 > **Verify:** in **Information protection** > **Sensitive info types**, `EmploymentContract` appears with status **Published**.
 
-### Create a sensitivity label — Highly Confidential/HR
+## Create a sensitivity label — Highly Confidential/HR
 
 Reference: [Create and configure sensitivity labels](https://learn.microsoft.com/en-us/purview/create-sensitivity-labels?tabs=modern-label-scheme#create-and-configure-sensitivity-labels)
 
@@ -142,7 +143,7 @@ Reference: [Create and configure sensitivity labels](https://learn.microsoft.com
 
 > **Verify:** in **Sensitivity labels**, the `HR` label appears nested under **Highly Confidential**.
 
-### Create the HR sensitivity label publishing policy
+## Create the HR sensitivity label publishing policy
 
 Reference: [Publish sensitivity labels by creating a label policy](https://learn.microsoft.com/en-us/purview/create-sensitivity-labels?tabs=modern-label-scheme#publish-sensitivity-labels-by-creating-a-label-policy)
 
@@ -170,7 +171,7 @@ Reference: [Publish sensitivity labels by creating a label policy](https://learn
 
 > **Verify:** the **HR publishing policy** appears with status **On (success)** within a few minutes. After up to 24 hours, the **HR** label is selectable in Word, Excel, PowerPoint, and Outlook for HR group members.
 
-## Information protection — Project DogOps
+# Information protection — Project DogOps
 
 In this section, you protect ProjectDogOps content by:
 
@@ -180,7 +181,7 @@ In this section, you protect ProjectDogOps content by:
 
 Together these steps demonstrate how custom classifiers, sensitivity labels, and automated policies identify, label, and safeguard confidential project information. Access to Project DogOps material is limited to the **U.S. Sales** group, which already exists in your CDX tenant.
 
-### Create a custom SIT — ProjectDogOps
+## Create a custom SIT — ProjectDogOps
 
 1. The keyword dictionaries are included in this repo:
    - [`data/DogBreeds.txt`](../data/DogBreeds.txt)
@@ -218,7 +219,7 @@ Together these steps demonstrate how custom classifiers, sensitivity labels, and
 
 > **Verify:** the `DogOps` SIT appears in the list with status **Published**.
 
-### Create a sensitivity label — DogOps (client-side auto-labeling)
+## Create a sensitivity label — DogOps (client-side auto-labeling)
 
 1. Go to **Information protection** > **Sensitivity Labels**, check **Highly Confidential**, then select **+ Create label in group** at the top-left of the labeling scheme.
 2. On **Label details**, set:
@@ -248,7 +249,7 @@ Together these steps demonstrate how custom classifiers, sensitivity labels, and
 
 > **Verify:** the `DogOps` label appears under **Highly Confidential**.
 
-### Publish the DogOps label
+## Publish the DogOps label
 
 Reference: [Publish sensitivity labels by creating a label policy](https://learn.microsoft.com/en-us/purview/create-sensitivity-labels?tabs=modern-label-scheme#publish-sensitivity-labels-by-creating-a-label-policy)
 
@@ -280,7 +281,7 @@ Reference: [Publish sensitivity labels by creating a label policy](https://learn
 
 > **Verify:** **DogOps publishing policy** appears with status **On (success)**.
 
-### Create an auto-labeling policy for DogOps (service-side)
+## Create an auto-labeling policy for DogOps (service-side)
 
 Reference: [Creating an auto-labeling policy](https://learn.microsoft.com/en-us/purview/apply-sensitivity-label-automatically?tabs=apply-label#creating-an-auto-labeling-policy)
 
@@ -320,7 +321,7 @@ Reference: [Create and deploy a data loss prevention policy](https://learn.micro
 
 This section uses Microsoft Purview Data Loss Prevention (DLP) to prevent unauthorized sharing of credential-related information. The custom DLP policy you create detects credential data and blocks its external sharing through Exchange Online and Microsoft Teams. The configuration combines sensitive-information detection, sharing conditions, access restrictions, and user notifications to reduce the risk of accidental or intentional data leakage.
 
-## Block external credential sharing
+# Block external credential sharing
 
 1. Go to **Solutions** > **Data loss prevention** > **Policies**, then select **Create policy**.
 2. Select **Enterprise applications & devices**.
