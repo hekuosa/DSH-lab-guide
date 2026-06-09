@@ -1,8 +1,6 @@
-# After the Lab — Developer Subscription
+# HR
 
-## HR
-
-### Client-side recommended labeling in action
+## Client-side recommended labeling in action
 
 Upload an HR document from [`test-files/HR test files/`](../test-files/HR%20test%20files/) to your admin user's OneDrive or any SharePoint site. Open the document in a web browser to trigger a policy tip recommending a sensitivity label. Alternatively, copy and paste content from any HR document in that folder into a blank document in your demo user's OneDrive.
 
@@ -22,9 +20,9 @@ If you try to change the label to a lower-priority label, you will be prompted t
 
 > **Verify:** the justification dialog appears and the label change is logged in **Microsoft Purview** > **Audit**.
 
-## Project DogOps
+# Project DogOps
 
-### Automatic client-side labeling
+## Automatic client-side labeling
 
 Paste content from any DogOps document in [`test-files/DogOps Test Files/`](../test-files/DogOps%20Test%20Files/) into a blank document in your admin user's OneDrive.
 
@@ -32,7 +30,7 @@ A policy tip confirms that the Highly Confidential/DogOps label has been applied
 
 ![Policy tip showing that the DogOps label was applied automatically based on detected content](../images/after-the-lab-developer-subscription-042-ffb97246.png)
 
-### Automatic service-side labeling in action
+## Automatic service-side labeling in action
 
 Upload the files in [`test-files/DogOps Test Files/`](../test-files/DogOps%20Test%20Files/) to a public SharePoint site. They are automatically labeled as Project DogOps within a few hours. You can confirm this in **Microsoft Purview** > **Activity explorer**.
 
@@ -40,9 +38,9 @@ Upload the files in [`test-files/DogOps Test Files/`](../test-files/DogOps%20Tes
 
 > **Verify:** in **Auto-labeling policies**, the simulation completes and the **Items to review** count matches the files you uploaded.
 
-### Encryption
+## Encryption
 
-#### User in the same organization
+### User in the same organization
 
 Sign in as a user that is **not** a member of the U.S. Sales group (for example `nestorw@<tenantname>.onmicrosoft.com`) and try to open any DogOps document. Access should be denied.
 
@@ -50,16 +48,20 @@ Sign in as a user that is **not** a member of the U.S. Sales group (for example 
 
 ![Access-denied screen in SharePoint for a non–U.S. Sales user opening a DogOps document](../images/after-the-lab-developer-subscription-045-2cc6b2e6.png)
 
-#### External user
+### External user
 
 Attach a DogOps file as a copy and send it to someone outside the demo organization. The document remains encrypted at the recipient's end.
 
 > **Verify:** the external recipient sees a sign-in / access-request screen instead of the document content.
 
-## DLP - Block external credential sharing
+# DLP 
+
+## Block external credential sharing
 
 Send the contents of [`data/fake-credentials.txt`](../data/fake-credentials.txt) to an external email address (for example a personal Gmail you control). The DLP policy blocks the message and you receive a notification.
 
 > **Note:** if `data/fake-credentials.txt` is not present in your clone, paste a few realistic-looking-but-fake credential lines (e.g. `username: alice@contoso.com`, `password: P@ssw0rd!`, `aws_secret_access_key=...`) into the body of the email instead. Never use real credentials.
 
 > **Verify:** in **Microsoft Purview** > **Data loss prevention** > **Activity explorer**, the email appears with action **Blocked** for the **Block external sharing of credentials** policy.
+
+## Notify users who store credentials in OneDrive or SharePoint

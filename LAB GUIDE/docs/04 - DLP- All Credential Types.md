@@ -56,6 +56,11 @@ This section uses Microsoft Purview Data Loss Prevention (DLP) to prevent unauth
 6. **Actions:** Block access for everyone.
 7. **User notifications:** On — notify the users who sent, shared, or last modified the content.
 8. **Email notifications:** turn on, then **Preview and edit notification email** to customize the sender display name, email subject, and email body.
+
+For a customised email body, you can use the following example or create your own.
+
+[Example body HTML](../materials/UserNotification.html)
+
 9. Turn the policy on.
 
 > **Verify:** the policy is listed under **DLP policies** with status **On**.

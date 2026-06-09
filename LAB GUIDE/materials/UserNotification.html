@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensitive Data Alert</title>
+</head>
+<body style="margin:0; padding:0; background-color:#f4f4f7; font-family: 'Segoe UI', Arial, sans-serif; color:#202124;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f4f4f7; padding:24px 0;">
+        <tr>
+            <td align="center">
+                <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.06);">
+                    <!-- Header -->
+                    <tr>
+                        <td style="background-color:#0078d4; padding:20px 28px;">
+                            <h1 style="margin:0; font-size:20px; color:#ffffff; font-weight:600;">
+                                Action required: Sensitive data blocked
+                            </h1>
+                            <p style="margin:4px 0 0; font-size:13px; color:#e6f0fb;">
+                                Alert!
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Intro -->
+                    <tr>
+                        <td style="padding:28px 28px 8px; font-size:15px; line-height:1.55; color:#202124;">
+                            <p style="margin:0 0 16px;">
+                                Contoso Ltd is using Microsoft Purview, a data security solution that includes built-in functionality to protect both you and TiuViu from inadvertent oversharing or accidental exposure of sensitive data.
+                            </p>
+                            <p style="margin:0 0 16px;">
+                                A recent scan indicates that there may be multiple instances of unprotected sensitive data in a file  <strong>%%Filename%%</strong> that you last modified.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Sensitive data callout -->
+                    <tr>
+                        <td style="padding:0 28px;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#fff4ce; border-left:4px solid #f7b400; border-radius:4px;">
+                                <tr>
+                                    <td style="padding:14px 16px; font-size:14px; line-height:1.5; color:#3b2f00;">
+                                        <strong style="display:block; margin-bottom:6px;">Sensitive data found:</strong>
+                                        <span> %%PolicyRule%%</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Instructions -->
+                    <tr>
+                        <td style="padding:24px 28px 8px; font-size:15px; line-height:1.55; color:#202124;">
+                            <h2 style="margin:0 0 10px; font-size:17px; color:#0078d4; font-weight:600;">Instructions</h2>
+                            <p style="margin:0 0 16px;">
+                                Please take the following actions:
+                            </p>
+                            <ul style="margin:0 0 16px 20px; padding:0;">
+                                <li style="margin-bottom:8px;">
+                                    Delete the sensitive content from the file: %%ContentUrl%%
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color:#f4f4f7; padding:16px 28px; font-size:12px; color:#5f6368; line-height:1.5;">
+                            This is an automated message from Contoso Ltd Security Office.<br>
+                            Please do not reply to this email.
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
