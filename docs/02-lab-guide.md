@@ -1,7 +1,5 @@
 # Lab Guide — Developer Subscription
 
-_Heta Kuosa & Christine Dienel · Microsoft EMEA · Updated 2026_
-
 ## Prerequisites
 
 Before starting this phase, complete [Phase 1 — Before the Lab](01-before-the-lab.md):
