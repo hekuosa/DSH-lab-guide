@@ -11,8 +11,8 @@ Together these steps demonstrate how custom classifiers, sensitivity labels, and
 ### Create a custom SIT — ProjectDogOps
 
 1. The keyword dictionaries are included in this repo:
-   - [`materials/DogBreeds.txt`](../materials/DogBreeds.txt)
-   - [`materials/DogWords.txt`](../materials/DogWords.txt)
+   - [`materials/DogBreeds.txt`](https://github.com/hekuosa/DSH-lab-guide/blob/main/LAB%20GUIDE/materials/DogBreeds.txt)
+   - [`materials/DogWords.txt`](https://github.com/hekuosa/DSH-lab-guide/blob/main/LAB%20GUIDE/materials/DogWords.txt)
 
    Save them locally so you can upload them in the wizard.
 
@@ -44,7 +44,7 @@ Together these steps demonstrate how custom classifiers, sensitivity labels, and
 6. Select **Save** to save the pattern, then **Next**.
 7. On **Review settings**, verify the details, then select **Create**.
 
-> **Verify:** the `DogOps` SIT appears in the list with status **Published**.
+> **Verify:** the `DogOps` SIT appears in the SIT list.
 
 ### Create a sensitivity label — DogOps (client-side auto-labeling)
 
