@@ -85,6 +85,10 @@ The final step is to run a sample script that uploads the HR data from the CSV f
 
 ## Create a keyword dictionary from a file using PS
 
+1. The keyword dictionaries are included in this repo:
+   - [`materials/007Movies.txt`](../materials/007Movies.txt)
+   - [`materials/007James.txt`](../materials/007James.txt)
+
 Reference: [Create a keyword dictionary from a file](https://learn.microsoft.com/en-us/purview/sit-create-a-keyword-dictionary#create-a-keyword-dictionary-from-a-file-using-powershell)
 
 1. To begin, you need to connect to Security & Compliance PowerShell.
