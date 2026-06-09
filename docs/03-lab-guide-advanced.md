@@ -10,7 +10,10 @@ Before starting this phase, complete [Phase 2 — Lab Guide](02-lab-guide.md):
 
 - Sensitivity labels and publishing policies are in place.
 - The **Block external sharing of credentials** DLP policy is on.
-- You have access to **Microsoft Purview** and **Microsoft Entra ID**, and a demo user (for example Isaiah Langer, `IsaiahL@<tenantname>.onmicrosoft.com`).
+- You have access to **Microsoft Purview** and **Microsoft Entra ID**, and a demo user
+   - `#M365 E5 Developer` Isaiah Langer, `IsaiahL@<tenantname>.onmicrosoft.com`
+   - `#MDX/CDX` USER , `user@<tenantname>.onmicrosoft.com` 
+ 
 
 # Data Loss Prevention
 
@@ -44,13 +47,16 @@ This scenario simulates a departing employee exfiltrating data, using an HR data
 ## Create the resignation CSV file
 
 1. Open the **Employee Resignations Simulation Template** Excel file.
-2. Populate column A with the email addresses of the participating users. You can use the demo user Isaiah Langer (`IsaiahL@<tenantname>.onmicrosoft.com`) or any other user in your tenant.
-3. The template includes pre-configured values for `<ResignationDate>` (midnight on the current day) and `<LastWorkingDate>` (10 days later).
+2. Populate column A with the email addresses of the participating users:
+   - `#M365 E5 Developer` Isaiah Langer, `IsaiahL@<tenantname>.onmicrosoft.com`
+   - `#MDX/CDX` USER , `user@<tenantname>.onmicrosoft.com` 
+ 
+4. The template includes pre-configured values for `<ResignationDate>` (midnight on the current day) and `<LastWorkingDate>` (10 days later).
 
    > _To use different dates, update the formulas in columns B and C using ISO 8601 format (YYYY-MM-DD). See [ISO 8601 date and time format](https://www.iso.org/iso-8601-date-and-time-format.html)._
 
-4. In Excel, select **File** > **Export** > **Change File Type** and choose **CSV (Comma delimited) (\*.csv)**.
-5. Select **Save a copy** and save the CSV to the local disk as `HR-Export`.
+5. In Excel, select **File** > **Export** > **Change File Type** and choose **CSV (Comma delimited) (\*.csv)**.
+6. Select **Save a copy** and save the CSV to the local disk as `HR-Export`.
 
 ## Register an application in Microsoft Entra ID
 
