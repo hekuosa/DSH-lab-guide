@@ -15,14 +15,13 @@ Before starting this phase, complete [Phase 2 — Lab Guide](02-lab-guide.md):
 # Data Loss Prevention
 
 ## DSPM — extend insights for data discovery 
-Note: Requires eDLP
+
+> **Note:** Requires eDLP.
 
 1. Go to **DSPM** > **Tasks and actions** > **Setup tasks**.
 2. Select **Extend your insights for data discovery** and create the following policies:
    - Detect when users visit AI sites
    - Detect sensitive info pasted or uploaded to AI sites
-
-> **Verify:** both policies appear under **DSPM** with status **On**.
 
 ## Notify users who store credentials in OneDrive or SharePoint 
 
