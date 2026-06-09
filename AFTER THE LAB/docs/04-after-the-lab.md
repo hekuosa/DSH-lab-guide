@@ -1,17 +1,5 @@
 # After the Lab — Developer Subscription
 
-_Data Security Hackathon · Heta Kuosa & Christine Dienel · Security Partner Solution Architect · Microsoft EMEA · 2026_
-
-## Prerequisites
-
-Before starting this phase, complete [Phase 2 — Lab Guide](02-lab-guide.md):
-
-- The **HR publishing policy** is published and on.
-- The **DogOps publishing policy** and the **Auto-labeling for Project DogOps** policy are published (auto-labeling can be in simulation mode).
-- The **Block external sharing of credentials** DLP policy is on.
-- The **U.S. Sales** group exists in your CDX tenant.
-- An external email address you control (e.g. a personal Gmail) for the DLP test.
-
 ## HR
 
 ### Client-side recommended labeling in action
