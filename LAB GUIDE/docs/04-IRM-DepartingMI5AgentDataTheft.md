@@ -1,6 +1,6 @@
 # Insider Risk Management — Departing Agent Data Theft
 
-!_The HR connector in this LAB works only if you have Microsoft 365 E5 Developer subscription
+<mark>The HR connector in this LAB works only if you have Microsoft 365 E5 Developer subscription<mark>
 
 This scenario simulates a departing employee exfiltrating data, using an HR data connector to feed resignation events into Insider Risk Management.
 
