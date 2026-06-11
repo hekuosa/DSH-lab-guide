@@ -5,7 +5,7 @@ This scenario simulates a departing employee (MI5 Agent) exfiltrating data, usin
 
 <mark> The HR connector in this lab only works with a Microsoft 365 E5 Developer subscription. If you are using a CDX/MDX environment, you will most likely encounter an error similar to the one shown in the image below. <mark>
 
-[HR connector error in CDX/MDX environment](../images/hr-connector-error_cdx-mdx.png)
+![HR connector error in CDX/MDX environment](../images/hr_connector_error_cdx_mdx.png)
 
 
 ## Create the resignation CSV file
@@ -39,7 +39,7 @@ This scenario simulates a departing employee (MI5 Agent) exfiltrating data, usin
 > **Note:** - you may see a notification on the connector page stating that your organization does not meet the license requirements. This message can be safely ignored. If you are using an E5 Developer subscription, it provides the same capabilities as Microsoft 365 E5, so you can continue with this lab without issues.
 For more information on licensing, see the [Microsoft Purview service description – Data connectors](https://learn.microsoft.com/en-gb/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description#microsoft-purview-data-connectors)
 
-[HR connector license warning](../images/hr-connector-error_e5dev.png)
+![HR connector license warning](../images/hr_connector_error_e5dev.png)
 
 1. Sign in to [Microsoft Purview](https://purview.microsoft.com/).
 2. In the left navigation, select **Settings**.
