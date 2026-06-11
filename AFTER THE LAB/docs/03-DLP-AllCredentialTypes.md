@@ -2,7 +2,7 @@
 
 ## Block external credential sharing
 
-Send the contents of [`test-files/sample_fake_credentials.docx.txt`](../test-files/sample_fake_credentials.docx) to an external email address (for example a personal Gmail you control or <meganb293157@gmail.com>). The DLP policy blocks the message and you receive a notification.
+Send the contents of [`test-files/sample_fake_credentials.docx`](../test-files/sample_fake_credentials.docx) to an external email address (for example a personal Gmail you control or <meganb293157@gmail.com>). The DLP policy blocks the message and you receive a notification.
 
 > **Note:**  Never use real credentials.
 
