@@ -5,7 +5,7 @@ Lab guides for the **Data Security Hack To Build** — Microsoft Purview configu
 - **Browse online:** <https://hekuosa.github.io/DSH-lab-guide/HTML/>
 - **Browse GitHub repo:** <https://github.com/hekuosa/DSH-lab-guide>
 
-> *Have feedback or ideas?* Use [this form](https://forms.office.com/r/B4TAeHbZzm) to **report issues, suggest improvements, or propose new lab scenarios or questions** for this guide. Every bit of feedback helps!
+> **Have feedback or ideas?** Use [this form](https://forms.office.com/r/B4TAeHbZzm) to **report issues, suggest improvements, or propose new lab scenarios or questions** for this guide. Every bit of feedback helps!
 
 ## Contents
 
