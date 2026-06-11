@@ -63,4 +63,4 @@ For a customised email body, you can use the following example or create your ow
 
 9. Turn the policy on.
 
-> **Verify:** the policy is listed under **DLP policies** with status **On**.
+> **Verify:** the policy is listed under **DLP policies**.
