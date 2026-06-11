@@ -101,6 +101,7 @@
 
 <script>
   const DOCS = [
+    { group: 'Home',          num: '·',  title: 'README',                            file: '../README.md',                                            dir: '../' },
     { group: 'Lab Scenarios', num: '01', title: 'HR',                              file: '../LAB GUIDE/docs/01-HR.md',                              dir: '../LAB GUIDE/' },
     { group: 'Lab Scenarios', num: '02', title: 'Project DogOps',                  file: '../LAB GUIDE/docs/02-ProjectDogOps.md',                  dir: '../LAB GUIDE/' },
     { group: 'Lab Scenarios', num: '03', title: 'DLP — All Credential Types',      file: '../LAB GUIDE/docs/03-DLP-AllCredentialTypes.md',         dir: '../LAB GUIDE/' },
@@ -164,6 +165,17 @@
           el.setAttribute(attr, doc.dir + stripped);
         });
       });
+      // Mark links that point to other docs in DOCS so the delegated handler
+      // (attached on docPaper below) can intercept clicks. Using delegation
+      // instead of per-link listeners — innerHTML assignment strips listeners.
+      tmp.querySelectorAll('a[href]').forEach(a => {
+        const href = a.getAttribute('href');
+        if (!href) return;
+        const matchIdx = DOCS.findIndex(d => href.endsWith(d.file.split('/').pop()));
+        if (matchIdx >= 0) {
+          a.dataset.docIdx = matchIdx;
+        }
+      });
       // Force download for material files
       tmp.querySelectorAll('a[href]').forEach(a => {
         const href = a.getAttribute('href');
@@ -185,7 +197,16 @@
   // Deep link support (#docs/01-HR.md)
   const hash = decodeURIComponent(location.hash.slice(1));
   const initialIdx = Math.max(0, DOCS.findIndex(d => d.file === hash));
-  if (hash) loadDoc(initialIdx);
+  loadDoc(initialIdx);
+
+  // Delegated handler: clicking a link in the rendered doc that points to another
+  // doc in DOCS loads it in the viewer instead of navigating away.
+  docPaper.addEventListener('click', e => {
+    const a = e.target.closest('a[data-doc-idx]');
+    if (!a) return;
+    e.preventDefault();
+    loadDoc(Number(a.dataset.docIdx));
+  });
 </script>
 
 </body>
