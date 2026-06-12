@@ -19,6 +19,8 @@ This scenario simulates a departing employee (MI5 Agent) exfiltrating data, usin
 4. In Excel, select **File** > **Export** > **Change File Type** and choose **CSV (Comma delimited) (\*.csv)**.
 5. Select **Save a copy** and save the CSV to the local disk as `HR-Export`.
 
+   > **Note** - In many regions (including much of Europe), Excel uses a semicolon (;) instead of a comma (,) as the default CSV separator because the comma is used as a decimal separator in those locales.Open up the       newly created csv file in Notepad for example and check if this is the case. If it is, replace all semicolons with commas and save. 
+
 ## Register an application in Microsoft Entra ID
 
 1. Sign in to [Microsoft Entra](https://entra.microsoft.com) and go to **App registrations**.
