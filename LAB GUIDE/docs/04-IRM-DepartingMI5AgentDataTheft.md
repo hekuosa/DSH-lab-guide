@@ -160,6 +160,7 @@ You can create SIT either through the Microsoft Purview portal or by using Secur
 9. **Indicators:**
    - **Office indicators:**
      - Downloading content from SharePoint
+     - Accessing sensitive or priority SharePoint files
      - Sending email with attachments to recipients outside the organization
      - Sending email with attachments to free public domains
      - Sending email with attachments to self
@@ -173,6 +174,7 @@ You can create SIT either through the Microsoft Purview portal or by using Secur
    - **Indicator thresholds** — select **Choose your own thresholds**:
      - **Office indicators:**
        - Downloading content from SharePoint — 3, 6, 9
+       - Accessing sensitive or priority SharePoint files - 3, 6, 9
        - Sending email with attachments to recipients outside the organization — 1, 2, 3
        - Sending email with attachments to free public domains — 1, 2, 3
        - Sending email with attachments to self — 2, 4, 6
