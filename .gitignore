@@ -5,3 +5,4 @@ bin/
 obj/
 Thumbs.db
 .DS_Store
+/AFTER THE LAB/test-files/sample_fake_credentials.docx
