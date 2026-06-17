@@ -2,8 +2,7 @@
 
 ## DSPM — extend insights for data discovery 
 
-> **Note:** Requires eDLP. If you have an Azure subscription, you can set up an Azure Virtual Desktop environment and onboard it to Microsoft Defender for Endpoint to try out eDLP features.
-
+> **Note:** Requires eDLP.
 
 1. Go to **DSPM** > **Tasks and actions** > **Setup tasks**.
 2. Select **Extend your insights for data discovery** and create the following policies:
