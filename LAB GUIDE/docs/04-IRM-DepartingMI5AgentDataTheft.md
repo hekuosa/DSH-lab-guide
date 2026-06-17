@@ -122,7 +122,7 @@ Do again for keyword dictionary 2.
 
 ##  Create a custom Sensitive Information Type (SIT) 
 
-Create MI5 custom SIT with the following configuration: 
+Create **Spectre_007** custom SIT with the following configuration: 
    - **Primary element** (keyword dictionary, Word match): `007Movies`
    - **Primary element** (keyword dictionary, Word match): `007James`
    - **Character proximity:** `300` 
