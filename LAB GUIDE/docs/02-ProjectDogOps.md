@@ -97,9 +97,8 @@ Reference: [Publish sensitivity labels by creating a label policy](https://learn
 
 6. **Settings** — select both:
    - Users must provide a justification to remove a label or lower its classification
-   - Require users to apply a label to their emails and documents
 
-   ![Mandatory labeling and downgrade-justification settings enabled](../images/lab-guide-developer-subscription-023-962670e8.png)
+   ![Mandatory labeling and downgrade-justification settings enabled](../images/publishing-settings.png)
 
 7. Select **Next**.
 8. Leave the default settings for the next few steps (Documents, Emails, Sites & Groups, etc.).
